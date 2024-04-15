@@ -1,0 +1,39 @@
+###
+POST http://localhost:8080/api/personas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Tomas",
+    "DNI": 1234567,
+    "FechaNacimiento": "2000-01-01"
+
+}
+###
+
+# Muestra todas las personas 
+
+GET http://localhost:8080/api/personas  HTTP/1.1
+
+
+###
+# Muestra una sola persona filtrada por id. el id puesto es uno generado por el proceso anterior
+GET http://localhost:8080/api/personas/661d582726c7fedafe6ba0e2 HTTP/1.1
+
+
+
+###
+# Actualiza los datos 
+PUT http://localhost:8080/api/personas/ HTTP/1.1
+
+{
+    "nombre": "Tomasito",
+    "DNI": 1234567,
+    "FechaNacimiento": "2000-01-01"
+
+}
+
+###
+
+# Elimina persona por id
+
+DELETE http://localhost:8080/api/personas/661d7bad50651f9e8367435a  HTTP/1.1
