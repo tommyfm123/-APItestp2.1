@@ -3,6 +3,8 @@ const express = require("express"); // llamo a express
 const mongoose = require("mongoose");
 require("dotenv").config(); //variable de ambiente
 const personasRoutes = require("./routes/personas");
+const codesRoutes = require("./routes/codes");
+const path = require('path');
 
 
 
@@ -14,6 +16,8 @@ const port = process.env.PORT || 8080; // conexion de puerto
 
 app.use(express.json());
 app.use('/api', personasRoutes);
+app.use('/api', codesRoutes);
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 
 //routes

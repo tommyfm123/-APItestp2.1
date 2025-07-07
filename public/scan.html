@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escanear Código</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    #scanner-container { display:none; width:100%; max-width:400px; margin:0 auto; }
+    #result { padding:10px; }
+    button { margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h2>Buscar producto</h2>
+  <div class="section">
+    <input type="text" id="code-input" placeholder="Ingresa o escanea un código"/>
+    <button id="scan-button">Escanear con cámara</button>
+  </div>
+  <div id="scanner-container"></div>
+  <div id="result"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+  <script src="scan.js"></script>
+</body>
+</html>
